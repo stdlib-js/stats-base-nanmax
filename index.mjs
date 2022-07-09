@@ -1,4 +1,0 @@
-// Copyright (c) 2022 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
-/// <reference types="./index.d.ts" />
-import r from"https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-nonenumerable-read-only-property@esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/math-base-assert-is-nan@esm/index.mjs";import t from"https://cdn.jsdelivr.net/gh/stdlib-js/math-base-assert-is-positive-zero@esm/index.mjs";function n(r,n,s){var i,a,o,f;if(r<=0)return NaN;if(1===r||0===s)return n[0];for(a=s<0?(1-r)*s:0,f=0;f<r&&(o=n[a])!=o;f++)a+=s;if(f===r)return NaN;for(i=o,f+=1;f<r;f++)o=n[a+=s],e(o)||(o>i||o===i&&t(o))&&(i=o);return i}r(n,"ndarray",(function(r,n,s,i){var a,o,f,d;if(r<=0)return NaN;if(1===r||0===s)return n[i];for(o=i,d=0;d<r&&(f=n[o])!=f;d++)o+=s;if(d===r)return NaN;for(a=f,d+=1;d<r;d++)f=n[o+=s],e(f)||(f>a||f===a&&t(f))&&(a=f);return a}));export{n as default};
-//# sourceMappingURL=index.mjs.map
