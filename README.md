@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import nanmax from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmax@esm/index.mjs';
+import nanmax from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmax@v0.2.2-esm/index.mjs';
 ```
 
 #### nanmax( N, x, stride )
@@ -156,7 +156,7 @@ var v = nanmax.ndarray( N, x, 2, 1 );
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import nanmax from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmax@esm/index.mjs';
+import nanmax from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmax@v0.2.2-esm/index.mjs';
 
 var x;
 var i;
