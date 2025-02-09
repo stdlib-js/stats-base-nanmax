@@ -41,32 +41,38 @@ limitations under the License.
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/stats-base-nanmax
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var nanmax = require( '@stdlib/stats-base-nanmax' );
+nanmax = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmax@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var nanmax = require( 'path/to/vendor/umd/stats-base-nanmax/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmax@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.nanmax;
+})();
+</script>
 ```
 
 #### nanmax( N, x, strideX )
@@ -155,11 +161,16 @@ var v = nanmax.ndarray( 5, x, 2, 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var uniform = require( '@stdlib/random-base-uniform' );
-var filledarrayBy = require( '@stdlib/array-filled-by' );
-var bernoulli = require( '@stdlib/random-base-bernoulli' );
-var nanmax = require( '@stdlib/stats-base-nanmax' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmax@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 function rand() {
     if ( bernoulli( 0.8 ) < 1 ) {
@@ -173,6 +184,11 @@ console.log( x );
 
 var v = nanmax( x.length, x, 1 );
 console.log( v );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -272,17 +288,17 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor
+[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor/tree/umd
 
 <!-- <related-links> -->
 
-[@stdlib/stats/base/dnanmax]: https://github.com/stdlib-js/stats-base-dnanmax
+[@stdlib/stats/base/dnanmax]: https://github.com/stdlib-js/stats-base-dnanmax/tree/umd
 
-[@stdlib/stats/base/max]: https://github.com/stdlib-js/stats-base-max
+[@stdlib/stats/base/max]: https://github.com/stdlib-js/stats-base-max/tree/umd
 
-[@stdlib/stats/base/nanmin]: https://github.com/stdlib-js/stats-base-nanmin
+[@stdlib/stats/base/nanmin]: https://github.com/stdlib-js/stats-base-nanmin/tree/umd
 
-[@stdlib/stats/base/snanmax]: https://github.com/stdlib-js/stats-base-snanmax
+[@stdlib/stats/base/snanmax]: https://github.com/stdlib-js/stats-base-snanmax/tree/umd
 
 <!-- </related-links> -->
 
