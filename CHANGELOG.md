@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-02-09)
+## Unreleased (2025-02-21)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`b644709`](https://github.com/stdlib-js/stdlib/commit/b64470944253e6c2be920aa4e066146bd9ab11f2) - **refactor:** update paths _(by Aayush Khanna)_
 -   [`56b35d1`](https://github.com/stdlib-js/stdlib/commit/56b35d1c27bd27e4e96f29dc77649aea26dea6ba) - **feat:** add support for accessor arrays and refactor `stats/base/nanmax` [(#5111)](https://github.com/stdlib-js/stdlib/pull/5111) _(by Aayush Khanna, Athan Reines)_
 
 </details>
